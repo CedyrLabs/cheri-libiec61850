@@ -10,9 +10,10 @@
 #include <stdint.h>
 #include <stdbool.h>
 #include <string.h>
+#include <stdalign.h>
 
 #ifdef __GNUC__
-#define ATTRIBUTE_PACKED __attribute__ ((__packed__))
+#define ATTRIBUTE_PACKED __attribute__ ((__packed__, aligned(16)))
 #else
 #define ATTRIBUTE_PACKED
 #endif
