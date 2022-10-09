@@ -35,6 +35,8 @@ endif(WIN32)
 
 include_directories(
     ${CMAKE_CURRENT_LIST_DIR}/inc
+    ${CMAKE_CURRENT_LIST_DIR}/../src/common/inc
+    ${CMAKE_CURRENT_LIST_DIR}/../src/mms/inc
 )
 
 set (libhal_linux_SRCS
