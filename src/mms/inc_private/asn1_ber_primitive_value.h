@@ -34,7 +34,7 @@ extern "C" {
 typedef struct ATTRIBUTE_PACKED {
 	uint8_t size;
 	uint8_t maxSize;
-	uint8_t* octets __attribute__((aligned(16)));
+	uint8_t* octets;
 } Asn1PrimitiveValue;
 
 LIB61850_INTERNAL Asn1PrimitiveValue*

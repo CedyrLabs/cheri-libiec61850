@@ -49,7 +49,7 @@ typedef struct sMmsVariableSpecification MmsVariableSpecification;
 
 struct ATTRIBUTE_PACKED sMmsVariableSpecification {
     MmsType type;
-    char* name __attribute__((aligned(16)));
+    char* name;
     union uMmsTypeSpecification
     {
         struct sMmsArray {

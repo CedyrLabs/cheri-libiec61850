@@ -61,7 +61,7 @@ struct ATTRIBUTE_PACKED sMmsValue {
             uint8_t size;
             uint8_t buf[6];
         } binaryTime;
-    } value __attribute__((aligned(16)));
+    } value;
 };
 
 

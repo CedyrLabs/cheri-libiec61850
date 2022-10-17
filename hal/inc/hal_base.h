@@ -18,9 +18,13 @@
 #include <stdalign.h>
 
 #ifdef __GNUC__
-#define ATTRIBUTE_PACKED __attribute__ ((__packed__, aligned(16)))
+    #ifdef __CheriBSD__
+        #define ATTRIBUTE_PACKED __attribute__ ((aligned(16)))
+    #else
+        #define ATTRIBUTE_PACKED __attribute__ ((packed))
+    #endif
 #else
-#define ATTRIBUTE_PACKED
+    #define ATTRIBUTE_PACKED
 #endif
 
 #ifndef DEPRECATED

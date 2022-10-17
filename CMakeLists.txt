@@ -10,6 +10,13 @@ endif()
 project(libiec61850)
 ENABLE_TESTING()
 
+# add preporcessor directive for CheriBSD
+cmake_host_system_information(RESULT DISTRIB_ID QUERY DISTRIB_ID)
+if(${DISTRIB_ID} MATCHES "cheribsd")
+  message(STATUS "DISTRIB_ID: ${DISTRIB_ID}")
+  add_compile_definitions(__CheriBSD__)
+endif()
+
 set(LIB_VERSION_MAJOR "1")
 set(LIB_VERSION_MINOR "5")
 set(LIB_VERSION_PATCH "1")
